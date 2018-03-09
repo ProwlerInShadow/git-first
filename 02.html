@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>练习</title>
+    <script type="text/javascript">
+    function check(){
+        var month = document.getElementById("month").value;
+        if(month ==1 || month == 3 || month == 5 ||month == 7 ||month == 8 ||month == 10 ||month == 12 ){
+            alert("该月有31天");
+        }else if(month == 4 || month == 6 || month == 9 || month == 11 ){
+            alert("该月30天");
+        }else if(month ==2 ){
+            alert("该月28天");
+        }else{
+            alert("其他");
+        }
+    }
+    </script>
+</head>
+<body>
+    请输入一个月份值 <input type="text" id="month">
+    <input type="button" value="查询" onclick="check()">
+</body>
+</html>

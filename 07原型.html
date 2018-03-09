@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>原型</title>
+   <!--
+            不使用工具包 ，也实现search和max功能
+            想把方法设计到Array内置对象中
+            使用原型属性给Array对象添加方法
+                1）js的每个对象中都包含了原型属性（prototype）
+   -->
+    <script type="text/javascript">
+        Array.prototype.search = function(target){
+             return this.indexOf(target);
+        }
+        Array.prototype.max = function(){
+             var temp = this[0];
+                for(var i = 1;i<this.length;i++){
+                    if(temp < this[i])
+                        temp = this[i];
+                }
+                return temp;
+        }
+
+
+        var myarr = [10,20,32,45,44];
+        var index = myarr.search(21);
+        document.write("位置是" + index);
+        var max = myarr.max();
+        document.write("最大值" + max);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

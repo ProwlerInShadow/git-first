@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>网页时钟</title>
+
+</head>
+<body>
+    当前日期 <span id = "dateTip"></span>
+     <script type="text/javascript">
+     function genNewDate(){
+        var date = new Date();
+        var dateStr = date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate() + "-" + "&nbsp;" + date.getHours() + ":" + date.getMinutes() + ":" +date.getSeconds();
+        var Tip = document.getElementById("dateTip");
+        Tip.innerHTML = dateStr;
+     }
+        //设置一个定时器 每个多少毫秒调用一次任务(函数)
+        window.setInterval("genNewDate()",1000);
+    </script>
+</body>
+</html>

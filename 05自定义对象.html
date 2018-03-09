@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>自定义对象</title>
+    <script type="text/javascript">
+    // //定义对象 :有参构造函数
+    // function Persion(name,age){
+    //     //定义属性
+    //     this.name = name;
+    //     this.age = age;
+    //     //定义方法
+    //     this.say = function(){
+    //         document.write("chinese");
+    //     }
+    // }
+    // var per = new Persion("lilei",20);
+    // document.write(per.name + "<br>");
+    // per.say();
+    /*
+     定义对象方式二： 无参数的构造函数
+     */
+    //定义对象
+    // function Person(){
+
+    // }
+    // //创建对象
+    // var p = new Perion();
+    // //追加属性 和方法
+    // p.name = "lilei";
+    // p.age = 20;
+    // p.say = function(){
+    //     alert("123124123123");
+    // }
+    /*
+    定义对象方式3： 使用object对象
+     */
+    // var p = new Object();
+    // p.name = "lilei";
+    // p.age = 20;
+    // p.say = function(){
+    //     alert("123124123123");
+    // }
+    // document.write(p.name);
+    // document.write(p.age);
+    // for(var i in p){
+    //     document.write(p[i] + "  ");
+    // }
+    // 定义对象方式4： 使用字面量的形式创建对象  json语言
+    var p = {
+        //定义属性
+        "name": "lilei",
+        "age": 20,
+        "say": function(){
+            alert("123124");
+        }
+    };
+    // document.write(p.name);
+    // document.write(p.age);
+    for(var i in p){
+        document.write(p[i] + "  ");
+    }
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
